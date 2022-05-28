@@ -33,11 +33,59 @@ petrick
 3 6 0 1 2 5 6 7
 ```
 ## 3. Algorithm
-123
 ### 3.1. Find PI
-asdf
+민텀을 구성하는 1의 개수별로 나뉘어진 ```cnt1```에서 검사할 민텀보다 1의 개수가 1개 더 많은 경우의 민텀들과 비교한다. 이때 차이점이 1인경우
+```dif == 1``` 차이점의 위치를 알려주는 ```dif_w```의 위치에 2를 넣고 ```tmp2[:dif_w] + "2" + tmp2[dif_w+1:]``` 해당 pi를 임시 리스트인 ```ad```에 저장한다.
+해당 1의 개수 리스트의 검사가 끝나면 압축된 2진수 리스트를 ```cnt1```에 다시 넣는다.
+만약 변화를 감지하는 ```change```의 값이 참이라면 다시 한번 더 검사를 시작하고, 거짓이라면 검사를 종료한다.
+```swift
+change = 1
+while(change):
+    change =0
+    for i in range(len(cnt1)-1):
+        ad = []
+        while(len(cnt1[i])>0):
+            now = cnt1[i].pop()
+            for j in range(len(cnt1[i+1])):
+                dif, dif_w =0, 0
+                for l in range(minterm[0]):
+                    if now[0][l] != cnt1[i+1][j][0][l]:
+                        dif += 1
+                        dif_w = l
+                if dif == 1:
+                    tmp2 = now[0]
+                    tmp2 = tmp2[:dif_w] + "2" + tmp2[dif_w+1:]
+                    now[1] += 1
+                    cnt1[i+1][j][1] += 1
+                    if not(tmp2 in ad):
+                        ad.append(tmp2)
+                    change = 1
+            if now[1] == 0:
+                ad.append(now[0])
+        for m in ad:
+            cnt1[i].append([m, 0])
+    if(len(cnt1[len(cnt1)-1])>0):
+        if(cnt1[len(cnt1)-1][0][1] != 0):
+            cnt1[len(cnt1)-1].pop()
+```
 ### 3.2. Find EPI
-asdf
+민텀과 민텀이 가지고 있는 pi들로 구성된 ```pis```리스트를 만든다. 이후 한개의 민텀이 하나의 pi만 가지고 있는 경우
+```i[1]==1 and not(i[2] in epis)``` epi에 해당 pi를 추가한다.
+```swift
+for i in pis:
+    for j in answer:
+        same = 0
+        for k in range(minterm[0]):
+            if(j[k] == "2" or j[k] == i[0][k]):
+                same += 1
+        if(same == minterm[0]):
+            i[1] += 1
+            i.append(j)
+            
+for i in pis:
+        if(i[1]==1 and not(i[2] in epis)):
+            epis.append(i[2])
+```
 ### 3.3. Culumn Dominance
 민텀과 민텀이 가지고 있는 pi들로 구성된 리스트 ```pi_tmp```를 구성 중인 pi개수 별로 정렬한다.
 그 후 가장 큰 크기의 민텀부터 검사를 시작하여 다른 민텀들과 비교를 해 다른 민텀이 가진
