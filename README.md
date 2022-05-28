@@ -1,11 +1,14 @@
 # QM-method
 2022 논회설 선택과제
 
-## Version
+## 1. Version
 * version : python3
 
-## TestCase
-123
+## 2. TestCase
+culum dominance
+```swift
 
-## Algorithm
+```
+
+## 3. Algorithm
 789
