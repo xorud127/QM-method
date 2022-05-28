@@ -5,7 +5,7 @@
 * version : python3
 
 ## 2. TestCase
-culum dominance
+culumn dominance
 ```swift
 
 ```
