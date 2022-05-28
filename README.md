@@ -2,7 +2,7 @@
 2022 논회설 선택과제
 
 ## Version
-*version : python3
+* version : python3
 
 ## TestCase
 123
