@@ -2,7 +2,11 @@
 2022 논회설 선택과제
 
 ## Table of Contents
-* [Version](#1.-Version)
+* [1. Version](#1.-Version)
+* [2. TestCase](#2.-TestCase)
+* [3. Algorithm](#3.-Algorithm)
+    + ?
+* [4. Result](#4.-Result)
 
 ## 1. Version
 * version : python3
