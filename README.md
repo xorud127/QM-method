@@ -49,6 +49,8 @@ asdf
 ```
 ### 3.3. Row Dominance
 ```swift
+answer.sort(key = lambda x:-x.count("2"))
+
     row = [[i, 0]for i in answer]
     for i in pi_tmp:
         for j in range(len(i)-2):
