@@ -86,6 +86,8 @@ asdf
 ```
 
 ## 4. Result
+2.TestCase들의 실행 결과 정리
+
 ```swift
 minterm :  [4, 5, 0, 1, 5, 6, 7] 
 
