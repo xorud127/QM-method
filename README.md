@@ -2,15 +2,15 @@
 2022 논회설 선택과제
 
 ## Table of Contents
-* [1. Version](#1.-Version)
-* [2. TestCase](#2.-TestCase)
-* [3. Algorithm](#3.-Algorithm)
-    + [3.1. Find PI](#3.1.-Find-PI)
-    + [3.2. Find EPI](#3.2.-Find-EPI)
-    + [3.3. Culumn Dominance](#3.3.-Culumn-Dominance)
-    + [3.4. Row Dominance](#3.4.-Row-Dominance)
-    + [3.5 Petrick Method](#3.5-Petrick-Method)
-* [4. Result](#4.-Result)
+* [1. Version](##1.-Version)
+* [2. TestCase](##2.-TestCase)
+* [3. Algorithm](##3.-Algorithm)
+    + [3.1. Find PI](###3.1.-Find-PI)
+    + [3.2. Find EPI](###3.2.-Find-EPI)
+    + [3.3. Culumn Dominance](###3.3.-Culumn-Dominance)
+    + [3.4. Row Dominance](###3.4.-Row-Dominance)
+    + [3.5 Petrick Method](###3.5-Petrick-Method)
+* [4. Result](##4.-Result)
 ## 1. Version
 * version : python3
 
