@@ -52,7 +52,7 @@ for i in cnt1:
         if not(j[0] in answer):
             answer.append(j[0])
 
-answer.sort(key = lambda x:-x.count("2"))
+answer.sort(key = lambda x:x.count("2"))
 
 for i in pis:
     for j in answer:
