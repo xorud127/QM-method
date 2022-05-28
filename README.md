@@ -33,7 +33,7 @@ petrick
 ### 3.1. Find PI
 asdf
 ### 3.2. Culumn Dominance
-민텀과 민텀이 가지고 있는 pi들로 구성된 리스트 ```pi_tmp```를 소유중인 pi개수 별로 정렬한다.
+민텀과 민텀이 가지고 있는 pi들로 구성된 리스트 ```pi_tmp```를 구성중인 pi개수 별로 정렬한다.
 그 후 가장 큰 크기의 민텀부터 검사를 시작하여 다른 민텀들과 비교를 해 다른 민텀이 가진
 pi들을 모두 가진 경우 즉 ```count==j[i]```일때 전체적 변화를 나타내는 ```change```를 참으로 바꾸고, 
 제거를 뜻하는 ```tf```를 참으로 바꿔준다. 이후 ```tf==0```일때는 임시 리스트인 ```cul```에 저장 후, 최종적으로 
@@ -58,8 +58,12 @@ pi들을 모두 가진 경우 즉 ```count==j[i]```일때 전체적 변화를 �
     pi_tmp += cul
 ```
 ### 3.3. Row Dominance
+pi와 pi가 가지고 있는 민텀들을 구성하는 ```row``` 리스트를 만들고, 구성중인 pi들의 개수로 정렬한다. 이때 pi들은 2의 개수 즉, -으로 묶여지는 개수로 정렬되어진다.
+```answer.sort(key = lambda x:x.count("2"))```
+이후 2의 개수가 적은 pi부터 시작하여 다른 pi과 비교한다. 해당 pi가 가지고 있는 민텀들을 다른 pi가 모두 가지고 있을 경우 해당 pi를 ```pi_tmp```에서 전부 제거해 준다. 
+만약 서로 다른 두 개의 pi가 같은 민텀을 가질 경우에 앞선 pi정렬을 통해 2의 개수가 작은 쪽, 사이즈가 작은 pi가 제거된다.
 ```swift
-answer.sort(key = lambda x:-x.count("2"))
+answer.sort(key = lambda x:x.count("2"))
 
     row = [[i, 0]for i in answer]
     for i in pi_tmp:
