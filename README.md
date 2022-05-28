@@ -23,4 +23,15 @@ petrick
 3 6 0 1 2 5 6 7
 ```
 ## 3. Algorithm
-789
+123
+### 3.1. Find PI
+asdf
+### 3.2. Culumn Dominance
+asdf
+### 3.3. Row Dominance
+asdf
+### 3.4 Petrick Method
+asdf
+
+## 4. Result
+sadf
