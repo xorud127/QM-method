@@ -2,15 +2,15 @@
 2022 논회설 선택과제
 
 ## Table of Contents
-* [1. Version](##1.-Version)
-* [2. TestCase](##2.-TestCase)
-* [3. Algorithm](##3.-Algorithm)
-    + [3.1. Find PI](###3.1.-Find-PI)
-    + [3.2. Find EPI](###3.2.-Find-EPI)
-    + [3.3. Culumn Dominance](###3.3.-Culumn-Dominance)
-    + [3.4. Row Dominance](###3.4.-Row-Dominance)
-    + [3.5 Petrick Method](###3.5-Petrick-Method)
-* [4. Result](##4.-Result)
+* [1. Version](#1-Version)
+* [2. TestCase](#2-TestCase)
+* [3. Algorithm](#3-Algorithm)
+    + [3.1. Find PI](#31-Find-PI)
+    + [3.2. Find EPI](#32-Find-EPI)
+    + [3.3. Culumn Dominance](#33-Culumn-Dominance)
+    + [3.4. Row Dominance](#34-Row-Dominance)
+    + [3.5 Petrick Method](#35-Petrick-Method)
+* [4. Result](#4-Result)
 ## 1. Version
 * version : python3
 
@@ -96,7 +96,7 @@ answer.sort(key = lambda x:x.count("2"))
                         k[1] -=1
                         change = 1
 ```
-### 3.5 Petrick Method
+### 3.5. Petrick Method
 row와 culumn로 더 이상 pi선별이 불가능 해진 상황 ```change == 0```이지만, 아직 처리되지 못한 민텀들이 남아있는 경우,
 결과가 나오지 않는 고착 상태에 빠졌을 경우 실행된다. 이때, 처리되지 못한 민텀중 하나를 골라 해당 민텀이 가지고 있는 pi중 
 가장 큰 사이즈의 pi를 선택하여```tmp.count("2") < pi_tmp[0][2+i].count("2")``` 고착 상태를 해결하고, ```change```를 참으로 바꿈으로써 나머지 민텀들도 처리되도록 구성되었다.
